@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { ChatState } from "./chatProvider.jsx";
+import axios from "axios";
 
 const Login = () => {
   const { setUser } = ChatState();
@@ -45,7 +46,7 @@ const Login = () => {
       };
 
       const { data } = await axios.post(
-        "/api/user/login",
+        "/user/login",
         { email, password },
         config,
       );
@@ -60,7 +61,7 @@ const Login = () => {
       setUser(data);
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
-      navigate("/chats");
+      navigate("/chat");
     } catch (error) {
       toast({
         title: "Error Occured!",
