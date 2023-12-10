@@ -10,8 +10,17 @@ import {
 } from "@chakra-ui/react";
 import Login from "./Login.jsx";
 import Signup from "./signup.jsx";
+import { ChatState } from "./chatProvider.jsx";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AuthPage = () => {
+  const { user } = ChatState();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (user) navigate("/chat");
+  }, [user]);
+
   return (
     <Container
       maxW="xl"
