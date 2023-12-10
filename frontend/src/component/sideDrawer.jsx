@@ -139,11 +139,8 @@ function SideDrawer() {
         <div>
           <Menu>
             <MenuButton p={1}>
-              {/*<NotificationBadge*/}
-              {/*  count={notification.length}*/}
-              {/*  effect={Effect.SCALE}*/}
-              {/*/>*/}
               <BellIcon fontSize="2xl" m={1} />
+              <span>{notification.length === 0 ? "" : notification.length}</span>
             </MenuButton>
             <MenuList pl={2}>
               {!notification.length && "No New Messages"}
