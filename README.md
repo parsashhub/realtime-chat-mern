@@ -5,7 +5,7 @@
 
 **Client:** React JS
 
-**Server:** Node JS, Express JS
+**Server:** Node JS, Express JS, Socket.io
 
 **Database:** Mongo DB
 
