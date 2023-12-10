@@ -10,7 +10,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import { ChatState } from "./chatProvider.jsx";
+import { ChatState } from "../chatProvider.jsx";
 import axios from "axios";
 
 const Login = () => {

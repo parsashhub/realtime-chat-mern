@@ -8,8 +8,8 @@ import {
   Tabs,
   Text,
 } from "@chakra-ui/react";
-import Login from "./Login.jsx";
-import Signup from "./signup.jsx";
+import Login from "./component/Login.jsx";
+import Signup from "./component/signup.jsx";
 import { ChatState } from "./chatProvider.jsx";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
